@@ -1,0 +1,95 @@
+.kontakt-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: white;
+    gap: 2rem;
+}
+
+.kontakt-info {
+    flex: 1 1 40%;
+    padding: 1rem;
+}
+
+.kontakt-info h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.kontakt-info p {
+    font-size: 1.2rem;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.kontakt-form {
+    flex: 1 1 55%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.form-group {
+    flex: 1 1 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    flex: 1 1 100%;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+input,
+textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+.cta-button {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .kontakt-container {
+        flex-direction: column;
+    }
+
+    .kontakt-form {
+        flex-direction: column;
+    }
+
+    .form-group {
+        flex: 1 1 100%;
+    }
+}
