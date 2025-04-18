@@ -77,6 +77,15 @@
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
+
+            // ⬇️ Una volta caricata la navbar, attiva il burger menu
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+            });
         });
 </script>
 
