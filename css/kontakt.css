@@ -1,35 +1,33 @@
-/* Kontaktform */
 .kontakt-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 4rem 2rem;
-    background-color: #fff;
-    gap: 2rem;
+    gap: 3rem;
+    padding: 5rem 2rem;
+    background-color: var(--background);
+    color: var(--text);
 }
 
 .kontakt-info {
     flex: 1 1 40%;
-    padding: 1rem;
 }
 
-.kontakt-info h1 {
-    font-size: 2.5rem;
+.kontakt-title {
+    font-size: 2.8rem;
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
-.kontakt-info p {
+.kontakt-subtext {
     font-size: 1.2rem;
-    color: var(--text);
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .kontakt-form {
     flex: 1 1 55%;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .form-group {
@@ -44,35 +42,43 @@
 
 label {
     margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: var(--text);
+    font-weight: 600;
+    color: var(--accent);
 }
 
 input,
 textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
+    padding: 0.75rem 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
     border-radius: 0.5rem;
     font-size: 1rem;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Avenir Next", sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 input:focus,
 textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.3);
 }
 
 .cta-button {
     background-color: var(--primary);
     color: white;
-    padding: 0.75rem 2rem;
+    padding: 0.9rem 2.2rem;
     border-radius: 0.5rem;
     border: none;
     cursor: pointer;
     font-weight: bold;
     margin-top: 1rem;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
@@ -80,14 +86,16 @@ textarea:focus {
     background-color: var(--button-hover);
 }
 
-/* media für flüßiges Design (Handy) */
+/* Responsive */
 @media (max-width: 768px) {
     .kontakt-container {
         flex-direction: column;
+        align-items: center;
     }
 
+    .kontakt-info,
     .kontakt-form {
-        flex-direction: column;
+        flex: 1 1 100%;
     }
 
     .form-group {
@@ -95,7 +103,7 @@ textarea:focus {
     }
 }
 
-/* Fehler in der Kontakt Form */
+/* Error Styling */
 .form-group.error input,
 .form-group.error textarea {
     border: 2px solid #EF4444;

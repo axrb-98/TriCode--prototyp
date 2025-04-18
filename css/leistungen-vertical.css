@@ -1,55 +1,87 @@
-.leistungen-header {
-    text-align: center;
-    padding: 4rem 2rem 2rem;
-    background-color: white;
+body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
-
-.leistungen-header h1 {
-    font-size: 2.5rem;
+.leistungen-header {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--background);
     color: var(--primary);
 }
 
-/* Slide layout */
-.leistung {
+.leistungen-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Slide container */
+.slides-container {
+    scroll-snap-type: y mandatory;
+    height: auto; /* lasciamo l'altezza libera */
+    width: 100%;
+}
+
+/* Stile slide invariato, ogni slide è 100vh */
+.slide {
     height: 100vh;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    padding: 2rem;
-    transition: transform 1s ease, opacity 1s ease;
-    opacity: 0;
-    transform: scale(0.95);
+    align-items: center;
+    scroll-snap-align: start;
     background-color: var(--background);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
 }
 
-.leistung.visible {
-    opacity: 1;
-    transform: scale(1);
+
+/* Icone */
+.slide i {
+    font-size: 5rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
 }
 
-.leistung img {
-    width: 40%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 1rem;
-    margin: 1rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+.slide:hover i {
+    transform: scale(1.2);
 }
 
-.leistung .text {
-    width: 50%;
-    max-width: 600px;
-    padding: 1rem;
-}
-
-.leistung h2 {
-    font-size: 2rem;
+/* Titolo */
+.slide h2 {
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.leistung p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+/* Testo */
+.slide p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+    .slide i {
+        font-size: 3.5rem;
+    }
+
+    .slide h2 {
+        font-size: 2rem;
+    }
+
+    .slide p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
 }
