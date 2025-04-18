@@ -5,21 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TriCode | Kontakt</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/kontakt.css">
 </head>
 <body>
 
 <header>
-    <nav class="navbar">
-        <div class="logo">TriCode</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="leistungen.html">Leistungen</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
+    <div id="navbar-placeholder"></div>
 </header>
 
 <section class="kontakt-container">
@@ -28,7 +20,7 @@
         <p>Wir würden dich gerne kennenlernen und mehr darüber erfahren, was wir gemeinsam gestalten und entwickeln können.</p>
     </div>
 
-    <form class="kontakt-form">
+    <form class="kontakt-form" method="POST" action="submit_form.php">
         <div class="form-group">
             <label for="vorname">Vorname</label>
             <input type="text" id="vorname" name="vorname" required>
@@ -53,6 +45,16 @@
     </form>
 </section>
 
-</body>
 <script src="js/kontakt.js"></script>
+
+<!-- Navi Template -->
+<script>
+    fetch('temp/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+</script>
+
+</body>
 </html>

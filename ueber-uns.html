@@ -4,42 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TriCode | Über uns</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
-<header>
-    <nav class="navbar">
-        <div class="logo">TriCode</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="leistungen.html">Leistungen</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-</header>
 
-<section class="hero">
-    <h1>Wir sind TriCode</h1>
+<!-- Navbar Placeholder -->
+<div id="navbar-placeholder"></div>
+
+<!-- Hero Content -->
+<section class="hero centered">
     <p>Wir sind keine klassische Agentur – wir sind drei Studenten, die sich in der Welt der IT zuhause fühlen. TriCode ist unsere Leidenschaft, unser Spielfeld, unsere Vision.</p>
 </section>
 
-<section class="content">
-    <h2>Unsere Idee</h2>
-    <p>Unsere Idee war einfach: Warum nicht unser Know-how bündeln und gemeinsam etwas Eigenes aufbauen? So entstand TriCode – ein Zusammenschluss von drei kreativen Köpfen, die sich für Webentwicklung, Design und smarte Softwarelösungen begeistern.</p>
+<section class="container mt-2 mb-4">
+    <div class="cards-container">
+        <div class="card bg-dark text-light flex-md-row align-items-center p-3 shadow rounded-4">
+            <div class="icon-container">
+                <i class="bi bi-lightbulb display-4 text-light"></i>
+            </div>
+            <div class="text-container">
+                <h5 class="card-title custom-primary">Unsere Idee</h5>
+                <p class="card-text">
+                    Unsere Idee war einfach: Warum nicht unser Know-how bündeln und gemeinsam etwas Eigenes aufbauen? So entstand TriCode – ein Zusammenschluss von drei kreativen Köpfen, die sich für Webentwicklung, Design und smarte Softwarelösungen begeistern
+                </p>
+            </div>
+        </div>
 
-    <h2>Unser Ansatz</h2>
-    <p>Wir glauben, dass echte Lösungen nicht nur funktionieren, sondern auch verstanden werden müssen. Deshalb setzen wir auf direkte Kommunikation, schnelle Umsetzung und ehrliche Beratung – ganz ohne Agentur-Blabla.</p>
+        <div class="card bg-dark text-light flex-md-row align-items-center p-3 shadow rounded-4">
+            <div class="icon-container">
+                <i class="bi bi-cpu display-4 text-light"></i>
+            </div>
+            <div class="text-container">
+                <h5 class="card-title custom-primary">Unser Ansatz</h5>
+                <p class="card-text">
+                    Wir glauben, dass echte Lösungen nicht nur funktionieren, sondern auch verstanden werden müssen. Deshalb setzen wir auf direkte Kommunikation, schnelle Umsetzung und ehrliche Beratung – ganz ohne Agentur-Blabla
+                </p>
+            </div>
+        </div>
 
-    <h2>Unser Ziel</h2>
-    <p>Unser Ziel ist es, Unternehmen jeder Größe – vom lokalen Geschäft bis zum internationalen Start-up – mit smarten, schlanken und zukunftssicheren Lösungen zu unterstützen. Wir hören zu, denken mit und liefern Ergebnisse, die zählen.</p>
-
-    <h2>Wer wir sind</h2>
-    <p>Wir sind jung, hungrig und motiviert. Und wir sind TriCode.</p>
-
-    <p>Wenn du mehr erfahren willst, sag einfach hallo – wir freuen uns auf dich.</p>
+        <div class="card bg-dark text-light flex-md-row align-items-center p-3 shadow rounded-4">
+            <div class="icon-container">
+                <i class="bi bi-bullseye display-4 text-light"></i>
+            </div>
+            <div class="text-container">
+                <h5 class="card-title custom-primary">Unser Ziel</h5>
+                <p class="card-text">
+                    Unser Ziel ist es, Unternehmen jeder Größe – vom lokalen Geschäft bis zum internationalen Start-up – mit smarten, schlanken und zukunftssicheren Lösungen zu unterstützen. Wir hören zu, denken mit und liefern Ergebnisse, die zählen
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<script src="js/main.js"></script>
+
+<!-- Load Navbar -->
+<script>
+    fetch('temp/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
 </body>
 </html>

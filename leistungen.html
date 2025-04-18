@@ -5,20 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TriCode | Leistungen</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/leistungen-vertical.css" />
 </head>
 <body>
 
 <header>
-    <nav class="navbar">
-        <div class="logo">TriCode</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="leistungen.html">Leistungen</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
+    <div id="navbar-placeholder"></div>
 </header>
 
 <section class="leistungen-header">
@@ -68,5 +61,15 @@
 </main>
 
 <script src="js/vertical-scroll.js"></script>
+
+<!-- Navi Template -->
+<script>
+    fetch('temp/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+</script>
+
 </body>
 </html>

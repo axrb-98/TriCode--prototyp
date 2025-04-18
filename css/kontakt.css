@@ -1,9 +1,10 @@
+/* Kontaktform */
 .kontakt-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 4rem 2rem;
-    background-color: white;
+    background-color: #fff;
     gap: 2rem;
 }
 
@@ -79,7 +80,7 @@ textarea:focus {
     background-color: var(--button-hover);
 }
 
-/* Responsive */
+/* media für flüßiges Design (Handy) */
 @media (max-width: 768px) {
     .kontakt-container {
         flex-direction: column;
@@ -92,4 +93,25 @@ textarea:focus {
     .form-group {
         flex: 1 1 100%;
     }
+}
+
+/* Fehler in der Kontakt Form */
+.form-group.error input,
+.form-group.error textarea {
+    border: 2px solid #EF4444;
+    animation: shake 0.2s 2;
+}
+
+.error-message {
+    color: #EF4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
 }
