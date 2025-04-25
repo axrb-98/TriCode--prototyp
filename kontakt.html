@@ -36,6 +36,7 @@
         <div class="form-group">
             <label for="email">E-Mail</label>
             <input type="email" id="email" name="email" required>
+            <div id="email-feedback" class="feedback-msg"></div>
         </div>
         <div class="form-group full">
             <label for="nachricht">Nachricht</label>
@@ -46,6 +47,24 @@
 </section>
 
 <script src="js/kontakt.js"></script>
+
+<script src="jquery-3.7.1.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $("#email").on("input", function() {
+            const email = $(this).val();
+            const feedback = $("#email-feedback");
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!regex.test(email)) {
+                feedback.text("Bitte eine gültige E-Mail Adresse angeben!").css("color", "red");
+            } else {
+                feedback.text("");
+            }
+        })
+    });
+</script>
 
 <script>
     fetch('temp/navbar.html')
