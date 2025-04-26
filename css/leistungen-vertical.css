@@ -70,6 +70,27 @@ body {
     margin: 0 auto;
 }
 
+.carousel-content {
+    display: flex;
+    flex-direction: column; /* Stellt sicher, dass die Elemente vertikal angeordnet sind */
+    justify-content: center; /* Zentriert die Elemente vertikal */
+    align-items: center;     /* Zentriert die Elemente horizontal */
+    height: 100%;            /* Stellt sicher, dass der Container die gesamte Höhe der Slide ausfüllt */
+    text-align: center;      /* Zentriert den Text */
+    margin-bottom: 12rem; /* Fügt Abstand zwischen Icon und Text hinzu */
+}
+
+
+.carousel-content i {
+    font-size: 4rem;         /* Macht die Icons größer */
+    margin-bottom: 10px;     /* Fügt Abstand zwischen Icon und Text hinzu */
+}
+
+.carousel-caption {
+    text-align: center;      /* Zentriert den Text */
+    font-size: 1.25rem;      /* Setzt eine passende Schriftgröße für den Text */
+}
+
 /* Responsive per mobile */
 @media (max-width: 768px) {
     .slide i {
