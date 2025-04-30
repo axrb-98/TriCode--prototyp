@@ -77,7 +77,7 @@ body {
     align-items: center;     /* Zentriert die Elemente horizontal */
     height: 100%;            /* Stellt sicher, dass der Container die gesamte Höhe der Slide ausfüllt */
     text-align: center;      /* Zentriert den Text */
-    margin-bottom: 16rem;    /* Fügt Abstand zwischen Icon und Text hinzu */
+    margin-bottom: 20rem;    /* Fügt Abstand zwischen Icon und Text hinzu */
 }
 
 
